@@ -1,3 +1,5 @@
+USE employees;
+
 SELECT
     *
 FROM

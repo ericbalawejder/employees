@@ -5,8 +5,11 @@ DROP PROCEDURE IF EXISTS select_employees;
 DELIMITER $$
 CREATE PROCEDURE select_employees()
 BEGIN
-            SELECT * FROM employees
-            LIMIT 1000;
+SELECT
+    *
+FROM
+    employees
+LIMIT 1000;
 END$$
 
 DELIMITER ;
@@ -24,7 +27,10 @@ call select_employees;
 DELIMITER $$
 CREATE PROCEDURE average_salary()
 BEGIN
-            SELECT ROUND(AVG(salary), 2) FROM salaries;
+SELECT
+    ROUND(AVG(salary), 2)
+FROM
+    salaries;
 END$$
 
 DELIMITER ;
@@ -199,17 +205,3 @@ DELIMITER ;
 
 # Call function:
 SELECT emp_info('Aruna', 'Journel');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
